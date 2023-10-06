@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 6fa437c6e385c014d96b25623155f1ca
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ItemDatabase: {fileID: 4900000, guid: 66be616e60e40884e9c70c737acdf77f, type: 3}
+  - TabIdleSprite: {fileID: 21300000, guid: bd434708b21a4f24395e80a72e9449fb, type: 3}
+  - TabSelectSprite: {fileID: 21300000, guid: 277f7e05838234f4fb3d20bd1bc8f4fd, type: 3}
+  - ExplainPanel: {instanceID: 0}
+  - ShopExplain: {instanceID: 0}
+  - CanvasRect: {instanceID: 0}
+  - ItemNameInput: {instanceID: 0}
+  - ItemNumberInput: {instanceID: 0}
+  - ShopnumberInput: {instanceID: 0}
+  - BuyWindow: {instanceID: 0}
+  - A_site: {instanceID: 0}
+  - B_site: {instanceID: 0}
+  - shopSnack: {instanceID: 0}
+  - shopDeco: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,7 +13,6 @@ public class StartSelect : MonoBehaviour
     public TextMeshProUGUI[] slotText;
     public string loadscene;
     public string newscene;
-
     bool[] savefile = new bool[3];
     // Start is called before the first frame update
     void Start()
@@ -21,19 +20,20 @@ public class StartSelect : MonoBehaviour
         //슬롯별로 저장된 데이터가 존재하는지 판단
         for (int i= 0; i < 3; i++) 
         {
-            if (File.Exists(DataManager.instance.path + $"{i}"+".txt"))
+            if (File.Exists(DataManager.instance.path + $"{i}" + ".txt"))
             {
                 savefile[i] = true;
                 DataManager.instance.nowSlot = i;
                 DataManager.instance.LoadData();
-                slotText[i].text = DataManager.instance.nowPlayer.day + " 일차" + "\n" + DateTime.Now.ToString();
+                slotText[i].text = DataManager.instance.nowPlayer.day + " 일차\n" + DataManager.instance.nowPlayer.date;
             }
             else
             {
+
                 slotText[i].text = "비어있음";
             }
         }
-        DataManager.instance.DataClear();
+       
     }
 
 

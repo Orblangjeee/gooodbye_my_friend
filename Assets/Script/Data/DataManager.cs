@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 
 public class PlayerData
@@ -44,7 +45,8 @@ public class PlayerData
     public bool Day7_note = false;
     public bool Day8_note = false;
     public bool Day10_note = false;
-    
+
+    public string date = "none";
 }
 
 public class DataManager : MonoBehaviour
@@ -55,8 +57,6 @@ public class DataManager : MonoBehaviour
 
     public string path;
     public int nowSlot;
-
-   
 
     private void Awake()
     {
@@ -84,10 +84,12 @@ public class DataManager : MonoBehaviour
 
     public void SaveData()
     {
+        nowPlayer.date = DateTime.Now.ToString();
         string data = JsonUtility.ToJson(nowPlayer);
-        File.WriteAllText(path + nowSlot.ToString()+".txt", data);
+        File.WriteAllText(path + nowSlot.ToString() + ".txt", data);
         
     }
+
 
     public void LoadData()
     {
